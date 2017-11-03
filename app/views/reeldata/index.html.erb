@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Reeldata</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reeldata.each do |reeldatum| %>
+      <tr>
+        <td><%= link_to 'Show', reeldatum %></td>
+        <td><%= link_to 'Edit', edit_reeldatum_path(reeldatum) %></td>
+        <td><%= link_to 'Destroy', reeldatum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reeldatum', new_reeldatum_path %>
